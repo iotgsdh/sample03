@@ -65,7 +65,9 @@ export default function News({ data }: Data) {
               <div className="text-sm">
                 <time dateTime={content.createdAt}>{formattedDate}</time>
               </div>
-              {content.title}
+              <span className="underline underline-offset-4">
+                {content.title}
+              </span>
             </Link>
           </li>
         );
