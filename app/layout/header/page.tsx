@@ -121,7 +121,7 @@ export default function Header() {
       "--headerHeight",
       `${headerHeight}px`,
     );
-  }, []);
+  }, [isPc]);
 
   return (
     <header
