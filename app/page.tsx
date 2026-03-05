@@ -17,20 +17,25 @@ export default async function Home() {
         <div className="bg01 bg02 relative flex h-dvh flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/ilja-tulit-ucAMMD36Si0-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat bg-blend-overlay">
           <div className="flex flex-col items-center gap-y-8 px-4">
             <p className="text-background text-shadow-foreground flex flex-col gap-y-2 font-bold text-shadow-2xs">
-              <span className="text-6xl">
+              <span className="text-6xl md:text-8xl">
                 MOVE
                 <br />
                 THE
-                <br />
+                <br className="md:hidden" />
+                <span className="hidden md:inline-block">&nbsp;</span>
                 WORLD.
               </span>
-              <span className="text-2xl">Your stage begins here.</span>
-              <span>世界を動かすのは、君だ。</span>
+              <span className="text-2xl md:text-center md:text-4xl">
+                Your stage begins here.
+              </span>
+              <span className="md:text-center md:text-2xl">
+                世界を動かすのは、君だ。
+              </span>
             </p>
             <div>
               <Link
                 href={"#"}
-                className="inline-block rounded-md bg-yellow-400 px-4 py-2 text-lg font-bold text-gray-400"
+                className="inline-block rounded-md bg-yellow-400 px-4 py-2 text-lg font-bold text-gray-400 md:text-2xl"
               >
                 JOIN NOW
               </Link>
@@ -40,8 +45,8 @@ export default async function Home() {
 
         {/* news */}
         <section className="py-4">
-          <div className="inner">
-            <h2 className="mb-2 text-lg font-bold">NEWS</h2>
+          <div className="inner md:flex md:items-center md:justify-center md:gap-x-8">
+            <h2 className="mb-2 text-lg font-bold md:mb-0">NEWS</h2>
             <News data={data} />
           </div>
         </section>

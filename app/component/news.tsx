@@ -40,7 +40,7 @@ export default function News({ data }: Data) {
   }, [index, data.contents.length]);
 
   return (
-    <ul className="h-11 overflow-hidden">
+    <ul className="h-11 overflow-hidden md:h-6">
       {loopList.map((content, i) => {
         const date = new Date(content.createdAt);
         const y = date.getFullYear();
@@ -58,7 +58,10 @@ export default function News({ data }: Data) {
             }}
             className="truncate"
           >
-            <Link href={`/pages/news/${content.id}`}>
+            <Link
+              href={`/pages/news/${content.id}`}
+              className="md:flex md:items-center md:gap-x-4"
+            >
               <div className="text-sm">
                 <time dateTime={content.createdAt}>{formattedDate}</time>
               </div>

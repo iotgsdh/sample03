@@ -4,10 +4,10 @@ import Image from "next/image";
 
 function Nav() {
   const listItems = items.map((item, i) => (
-    <li key={i}>
+    <li key={i} className="w-[50%]">
       <Link
         href={item.path}
-        className="block flex flex-col items-center py-2 font-bold"
+        className="flex flex-col items-center py-2 font-bold"
       >
         {item.en}
         <span className="block text-xs">{item.ja}</span>
@@ -17,7 +17,7 @@ function Nav() {
 
   return (
     <nav>
-      <ul className="flex flex-wrap justify-between gap-x-4">{listItems}</ul>
+      <ul className="flex flex-wrap">{listItems}</ul>
     </nav>
   );
 }
@@ -95,7 +95,7 @@ export default function Footer() {
   return (
     <footer className="bg03 bg04 relative py-8">
       <div className="inner relative z-10">
-        <div className="mb-4 text-2xl font-bold">
+        <div className="mb-4 text-center text-2xl font-bold">
           <Link href={"/"}>IGNITE MOVEMENT</Link>
         </div>
         <Nav />
