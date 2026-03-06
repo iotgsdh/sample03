@@ -14,7 +14,7 @@ export default async function Home() {
     <div>
       <main>
         {/* hero */}
-        <div className="bg01 bg02 relative flex h-dvh flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/ilja-tulit-ucAMMD36Si0-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat bg-blend-overlay">
+        <div className="bg01 bg02 relative flex h-dvh flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/ilja-tulit-ucAMMD36Si0-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat bg-blend-overlay landscape:h-[150dvh]">
           <div className="flex flex-col items-center gap-y-8 px-4">
             <p className="text-background text-shadow-foreground flex flex-col gap-y-2 font-bold text-shadow-2xs">
               <span className="text-6xl md:text-8xl">
@@ -52,7 +52,7 @@ export default async function Home() {
         </section>
 
         {/* events */}
-        <section className="bg03 bg04 bg-foreground relative py-16">
+        <section className="bg03 bg04 bg-foreground relative py-16 md:py-32">
           <div className="inner relative z-10">
             <h2 className="text-background mb-2 text-4xl font-bold">EVENTS</h2>
             <Events />
@@ -60,34 +60,41 @@ export default async function Home() {
         </section>
 
         {/* about */}
-        <section className="bg03 bg04 relative py-16">
+        <section className="bg03 bg04 relative py-16 md:py-32">
           <div className="inner relative z-10">
-            <p className="mb-4">
-              <span className="text-lg font-bold">MOVE BEYOND LIMITS.</span>
-              <br />
-              IGNITE
-              MOVEMENTは、パフォーマンスと創造性を通じて新しいカルチャーを創り出すコミュニティです。
-              <br />
-              ジャンルや国境を越え、挑戦するすべての人にステージを提供します。
-            </p>
-            <div className="mb-4">
-              <Image
-                src={"/images/anna-frizen-QA1ZFTvNnuQ-unsplash.jpg"}
-                width={400}
-                height={530}
-                alt=""
-                className="w-full"
-              />
+            <div className="md:flex md:items-center md:justify-between">
+              <p className="mb-4 md:order-2 md:w-[45%]">
+                <span className="text-lg font-bold">MOVE BEYOND LIMITS.</span>
+                <br />
+                IGNITE
+                MOVEMENTは、パフォーマンスと創造性を通じて新しいカルチャーを創り出すコミュニティです。
+                <br />
+                ジャンルや国境を越え、挑戦するすべての人にステージを提供します。
+              </p>
+              <div className="mb-4 md:order-1 md:w-[45%]">
+                <Image
+                  src={"/images/anna-frizen-QA1ZFTvNnuQ-unsplash.jpg"}
+                  width={400}
+                  height={530}
+                  alt=""
+                  className="w-full object-cover md:aspect-400/530"
+                />
+              </div>
             </div>
-            <p className="mb-8 text-2xl font-bold">
-              さあ、一歩を踏み出せ。
-              <br />
-              ここから始まる。
-              <br />
-              未来は、動き出している。
-            </p>
+            <div className="md:flex md:justify-center">
+              <p className="mb-8 text-2xl font-bold md:text-4xl md:leading-14">
+                さあ、一歩を踏み出せ。
+                <br />
+                ここから始まる。
+                <br />
+                未来は、動き出している。
+              </p>
+            </div>
             <h2 className="flex justify-end">
-              <Link href={"#"} className="flex items-center text-lg font-bold">
+              <Link
+                href={"#"}
+                className="flex items-center text-lg font-bold md:text-2xl"
+              >
                 ABOUT
                 <div className="w-6">
                   <svg
@@ -103,16 +110,18 @@ export default async function Home() {
         </section>
 
         {/* list */}
-        <div className="bg03 bg04 relative bg-(--foreground-transparent50) bg-[url(../public/images/samantha-gades-fIHozNWfcvs-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat py-16 bg-blend-overlay">
+        <div className="bg03 bg04 relative bg-(--foreground-transparent50) bg-[url(../public/images/samantha-gades-fIHozNWfcvs-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat py-16 bg-blend-overlay md:py-32">
           <div className="inner relative z-10">
             <ul className="w-[75%]">
               <li>
                 <Link
                   href={"#"}
-                  className="bg-foreground flex items-center justify-between p-2"
+                  className="bg-foreground flex items-center justify-between p-2 md:p-4"
                 >
                   <div className="text-background font-bold">
-                    <span className="block text-lg">WHAT&apos;S NEW</span>
+                    <span className="block text-lg md:text-2xl">
+                      WHAT&apos;S NEW
+                    </span>
                     <span className="block">最新情報</span>
                   </div>
                   <div className="fill-background w-6">
@@ -128,10 +137,10 @@ export default async function Home() {
               <li>
                 <Link
                   href={"#"}
-                  className="bg-background flex items-center justify-between p-2"
+                  className="bg-background flex items-center justify-between p-2 md:p-4"
                 >
                   <div className="font-bold">
-                    <span className="block text-lg">PROGRAM</span>
+                    <span className="block text-lg md:text-2xl">PROGRAM</span>
                     <span className="block">育成プログラム</span>
                   </div>
                   <div className="w-6">
@@ -147,10 +156,12 @@ export default async function Home() {
               <li>
                 <Link
                   href={"#"}
-                  className="bg-foreground flex items-center justify-between p-2"
+                  className="bg-foreground flex items-center justify-between p-2 md:p-4"
                 >
                   <div className="text-background font-bold">
-                    <span className="block text-lg">EVENT SCHEDULE</span>
+                    <span className="block text-lg md:text-2xl">
+                      EVENT SCHEDULE
+                    </span>
                     <span className="block">イベント一覧</span>
                   </div>
                   <div className="fill-background w-6">
@@ -166,10 +177,10 @@ export default async function Home() {
               <li>
                 <Link
                   href={"#"}
-                  className="bg-background flex items-center justify-between p-2"
+                  className="bg-background flex items-center justify-between p-2 md:p-4"
                 >
                   <div className="font-bold">
-                    <span className="block text-lg">RANKING</span>
+                    <span className="block text-lg md:text-2xl">RANKING</span>
                     <span className="block">参加者ランキング</span>
                   </div>
                   <div className="w-6">
@@ -187,7 +198,7 @@ export default async function Home() {
         </div>
 
         {/* partners */}
-        <section className="bg03 bg04 bg-foreground relative py-16">
+        <section className="bg03 bg04 bg-foreground relative py-16 md:py-32">
           <div className="inner relative z-10">
             <div className="mb-8">
               <h2 className="text-background mb-2 text-center text-lg font-bold">
@@ -201,6 +212,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="NOVA ENERGY"
+                      className="md:w-full"
                     />
                   </a>
                 </div>
@@ -211,6 +223,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="BLUE CORE"
+                      className="md:w-full"
                     />
                   </a>
                 </div>
@@ -221,6 +234,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="VISION HOLDINGS"
+                      className="md:w-full"
                     />
                   </a>
                 </div>
@@ -231,6 +245,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="ARK SYSTEMS"
+                      className="md:w-full"
                     />
                   </a>
                 </div>
@@ -248,6 +263,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="AEROFLOW"
+                      className="md:w-full"
                     />
                   </a>
                 </div>
@@ -265,6 +281,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="URBAN TIMES"
+                      className="md:w-full"
                     />
                   </a>
                 </div>
@@ -275,6 +292,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="NEXT MAG"
+                      className="md:w-full"
                     />
                   </a>
                 </div>

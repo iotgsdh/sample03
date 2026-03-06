@@ -11,7 +11,7 @@ function Nav() {
     <li key={i} className="md:w-[50%] md:justify-center lg:w-auto">
       <Link
         href={item.path}
-        className="text-background block p-4 text-lg font-bold md:text-center lg:px-4 lg:py-0 lg:text-xl"
+        className="text-background block p-4 text-lg font-bold md:text-center md:text-xl lg:px-4 lg:py-0 lg:text-xl"
       >
         {item.en}
         <span className="block text-sm lg:text-xs">{item.ja}</span>

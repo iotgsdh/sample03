@@ -7,10 +7,10 @@ function Nav() {
     <li key={i} className="w-[50%]">
       <Link
         href={item.path}
-        className="flex flex-col items-center py-2 font-bold"
+        className="flex flex-col items-center py-2 font-bold md:text-xl"
       >
         {item.en}
-        <span className="block text-xs">{item.ja}</span>
+        <span className="block text-xs md:text-sm">{item.ja}</span>
       </Link>
     </li>
   ));
@@ -93,7 +93,7 @@ function Sns() {
 
 export default function Footer() {
   return (
-    <footer className="bg03 bg04 relative py-8">
+    <footer className="bg03 bg04 relative py-8 md:py-16">
       <div className="inner relative z-10">
         <div className="mb-4 text-center text-2xl font-bold">
           <Link href={"/"}>IGNITE MOVEMENT</Link>

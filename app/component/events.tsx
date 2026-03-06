@@ -52,7 +52,7 @@ export default function Events() {
 
   return (
     <div>
-      <div className="mb-4 flex overflow-x-hidden">
+      <div className="mb-4 flex overflow-x-hidden md:mx-auto md:w-[75%]">
         {loopEvents.map((event, i) => (
           <div
             key={i}
