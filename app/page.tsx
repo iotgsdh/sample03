@@ -14,8 +14,8 @@ export default async function Home() {
     <div>
       <main>
         {/* hero */}
-        <div className="bg01 bg02 relative flex h-dvh flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/ilja-tulit-ucAMMD36Si0-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat bg-blend-overlay landscape:h-[150dvh]">
-          <div className="flex flex-col items-center gap-y-8 px-4">
+        <div className="bg01 bg02 relative flex h-dvh flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/ilja-tulit-ucAMMD36Si0-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat bg-blend-overlay landscape:h-[150dvh] lg:landscape:h-dvh">
+          <div className="relative flex flex-col items-center px-4">
             <p className="text-background text-shadow-foreground flex flex-col gap-y-2 font-bold text-shadow-2xs">
               <span className="text-6xl md:text-8xl">
                 MOVE
@@ -32,7 +32,7 @@ export default async function Home() {
                 世界を動かすのは、君だ。
               </span>
             </p>
-            <div>
+            <div className="absolute top-[calc(100%+24px)]">
               <Link
                 href={"#"}
                 className="inline-block rounded-md bg-yellow-400 px-4 py-2 text-lg font-bold text-gray-400 md:text-2xl"
@@ -112,11 +112,11 @@ export default async function Home() {
         {/* list */}
         <div className="bg03 bg04 relative bg-(--foreground-transparent50) bg-[url(../public/images/samantha-gades-fIHozNWfcvs-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat py-16 bg-blend-overlay md:py-32">
           <div className="inner relative z-10">
-            <ul className="w-[75%]">
+            <ul className="w-fit">
               <li>
                 <Link
                   href={"#"}
-                  className="bg-foreground flex items-center justify-between p-2 md:p-4"
+                  className="bg-foreground flex items-center justify-between gap-x-4 p-2 md:p-4"
                 >
                   <div className="text-background font-bold">
                     <span className="block text-lg md:text-2xl">
@@ -137,7 +137,7 @@ export default async function Home() {
               <li>
                 <Link
                   href={"#"}
-                  className="bg-background flex items-center justify-between p-2 md:p-4"
+                  className="bg-background flex items-center justify-between gap-x-4 p-2 md:p-4"
                 >
                   <div className="font-bold">
                     <span className="block text-lg md:text-2xl">PROGRAM</span>
@@ -156,7 +156,7 @@ export default async function Home() {
               <li>
                 <Link
                   href={"#"}
-                  className="bg-foreground flex items-center justify-between p-2 md:p-4"
+                  className="bg-foreground flex items-center justify-between gap-x-4 p-2 md:p-4"
                 >
                   <div className="text-background font-bold">
                     <span className="block text-lg md:text-2xl">
@@ -177,7 +177,7 @@ export default async function Home() {
               <li>
                 <Link
                   href={"#"}
-                  className="bg-background flex items-center justify-between p-2 md:p-4"
+                  className="bg-background flex items-center justify-between gap-x-4 p-2 md:p-4"
                 >
                   <div className="font-bold">
                     <span className="block text-lg md:text-2xl">RANKING</span>
