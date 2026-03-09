@@ -126,9 +126,9 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="inset-bs-0 inset-s-0 fixed z-50 w-full bg-(--foreground-transparent50) py-2 lg:py-8"
+      className="fixed inset-s-0 inset-bs-0 z-50 w-full bg-(--foreground-transparent50) py-2 lg:py-8"
     >
-      <div className="inner flex items-center justify-between lg:mb-4">
+      <div className="inner flex items-center justify-between gap-x-4 lg:mb-4">
         <h1
           onClick={() => {
             setIsOpen(false);

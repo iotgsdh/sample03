@@ -17,7 +17,7 @@ export default async function Home() {
         <div className="bg01 bg02 relative flex h-dvh flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/ilja-tulit-ucAMMD36Si0-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat bg-blend-overlay landscape:h-[150dvh] lg:landscape:h-dvh">
           <div className="relative flex flex-col items-center px-4">
             <p className="text-background text-shadow-foreground flex flex-col gap-y-2 font-bold text-shadow-2xs">
-              <span className="text-6xl md:text-8xl">
+              <span className="text-6xl md:text-8xl lg:text-9xl">
                 MOVE
                 <br />
                 THE
@@ -25,17 +25,17 @@ export default async function Home() {
                 <span className="hidden md:inline-block">&nbsp;</span>
                 WORLD.
               </span>
-              <span className="text-2xl md:text-center md:text-4xl">
+              <span className="text-2xl md:text-center md:text-4xl lg:text-6xl">
                 Your stage begins here.
               </span>
-              <span className="md:text-center md:text-2xl">
+              <span className="md:text-center md:text-2xl lg:text-4xl">
                 世界を動かすのは、君だ。
               </span>
             </p>
-            <div className="absolute top-[calc(100%+24px)]">
+            <div className="absolute top-[calc(100%+24px)] lg:top-[calc(100%+48px)]">
               <Link
                 href={"#"}
-                className="inline-block rounded-md bg-yellow-400 px-4 py-2 text-lg font-bold text-gray-400 md:text-2xl"
+                className="inline-block rounded-md bg-yellow-400 px-4 py-2 text-lg font-bold text-gray-400 md:text-2xl lg:px-8 lg:py-4 lg:text-4xl"
               >
                 JOIN NOW
               </Link>
@@ -54,7 +54,9 @@ export default async function Home() {
         {/* events */}
         <section className="bg03 bg04 bg-foreground relative py-16 md:py-32">
           <div className="inner relative z-10">
-            <h2 className="text-background mb-2 text-4xl font-bold">EVENTS</h2>
+            <h2 className="text-background mb-2 text-4xl font-bold lg:text-6xl">
+              EVENTS
+            </h2>
             <Events />
           </div>
         </section>
@@ -62,7 +64,7 @@ export default async function Home() {
         {/* about */}
         <section className="bg03 bg04 relative py-16 md:py-32">
           <div className="inner relative z-10">
-            <div className="md:flex md:items-center md:justify-between">
+            <div className="gap-x-8 md:flex md:items-center md:justify-between lg:justify-center">
               <p className="mb-4 md:order-2 md:w-[45%]">
                 <span className="text-lg font-bold">MOVE BEYOND LIMITS.</span>
                 <br />
@@ -71,7 +73,7 @@ export default async function Home() {
                 <br />
                 ジャンルや国境を越え、挑戦するすべての人にステージを提供します。
               </p>
-              <div className="mb-4 md:order-1 md:w-[45%]">
+              <div className="mb-4 md:order-1 md:w-[45%] lg:w-[30%]">
                 <Image
                   src={"/images/anna-frizen-QA1ZFTvNnuQ-unsplash.jpg"}
                   width={400}
@@ -82,7 +84,7 @@ export default async function Home() {
               </div>
             </div>
             <div className="md:flex md:justify-center">
-              <p className="mb-8 text-2xl font-bold md:text-4xl md:leading-14">
+              <p className="mb-8 text-2xl font-bold md:text-4xl md:leading-14 lg:text-5xl lg:leading-18">
                 さあ、一歩を踏み出せ。
                 <br />
                 ここから始まる。
@@ -93,7 +95,7 @@ export default async function Home() {
             <h2 className="flex justify-end">
               <Link
                 href={"#"}
-                className="flex items-center text-lg font-bold md:text-2xl"
+                className="flex items-center text-lg font-bold md:text-2xl lg:text-4xl"
               >
                 ABOUT
                 <div className="w-6">
@@ -111,8 +113,8 @@ export default async function Home() {
 
         {/* list */}
         <div className="bg03 bg04 relative bg-(--foreground-transparent50) bg-[url(../public/images/samantha-gades-fIHozNWfcvs-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat py-16 bg-blend-overlay md:py-32">
-          <div className="inner relative z-10">
-            <ul className="w-fit">
+          <div className="inner relative z-10 lg:mx-auto lg:w-4xl">
+            <ul className="w-[80%] md:w-[60%]">
               <li>
                 <Link
                   href={"#"}
@@ -199,12 +201,12 @@ export default async function Home() {
 
         {/* partners */}
         <section className="bg03 bg04 bg-foreground relative py-16 md:py-32">
-          <div className="inner relative z-10">
+          <div className="inner relative z-10 mx-auto lg:w-2xl">
             <div className="mb-8">
               <h2 className="text-background mb-2 text-center text-lg font-bold">
                 OFFICIAL PARTNERS
               </h2>
-              <div className="flex flex-wrap justify-between gap-y-4 px-4">
+              <div className="flex flex-wrap justify-between gap-y-4">
                 <div className="w-[calc(50%-8px)]">
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <Image
@@ -212,7 +214,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="NOVA ENERGY"
-                      className="md:w-full"
+                      className="w-full"
                     />
                   </a>
                 </div>
@@ -223,7 +225,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="BLUE CORE"
-                      className="md:w-full"
+                      className="w-full"
                     />
                   </a>
                 </div>
@@ -234,7 +236,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="VISION HOLDINGS"
-                      className="md:w-full"
+                      className="w-full"
                     />
                   </a>
                 </div>
@@ -245,7 +247,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="ARK SYSTEMS"
-                      className="md:w-full"
+                      className="w-full"
                     />
                   </a>
                 </div>
@@ -255,7 +257,7 @@ export default async function Home() {
               <h2 className="text-background mb-2 text-center text-lg font-bold">
                 OFFICIAL WEAR PARTNER
               </h2>
-              <div className="flex flex-wrap justify-center px-4">
+              <div className="flex flex-wrap justify-center">
                 <div className="w-[calc(50%-8px)]">
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <Image
@@ -263,7 +265,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="AEROFLOW"
-                      className="md:w-full"
+                      className="w-full"
                     />
                   </a>
                 </div>
@@ -273,7 +275,7 @@ export default async function Home() {
               <h2 className="text-background mb-2 text-center text-lg font-bold">
                 MEDIA PARTNERS
               </h2>
-              <div className="flex flex-wrap justify-between gap-y-4 px-4">
+              <div className="flex flex-wrap justify-between gap-y-4">
                 <div className="w-[calc(50%-8px)]">
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <Image
@@ -281,7 +283,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="URBAN TIMES"
-                      className="md:w-full"
+                      className="w-full"
                     />
                   </a>
                 </div>
@@ -292,7 +294,7 @@ export default async function Home() {
                       width={300}
                       height={150}
                       alt="NEXT MAG"
-                      className="md:w-full"
+                      className="w-full"
                     />
                   </a>
                 </div>

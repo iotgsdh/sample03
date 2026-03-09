@@ -52,7 +52,7 @@ export default function Events() {
 
   return (
     <div>
-      <div className="mb-4 flex overflow-x-hidden md:mx-auto md:w-[75%]">
+      <div className="mb-4 flex overflow-x-hidden md:mx-auto md:w-[75%] lg:mb-8 lg:w-[60%]">
         {loopEvents.map((event, i) => (
           <div
             key={i}
@@ -72,7 +72,9 @@ export default function Events() {
                   className="w-full"
                 />
               </div>
-              <h3 className="text-background font-bold">{event.title}</h3>
+              <h3 className="text-background font-bold lg:text-2xl">
+                {event.title}
+              </h3>
             </Link>
           </div>
         ))}

@@ -16,8 +16,8 @@ function Nav() {
   ));
 
   return (
-    <nav>
-      <ul className="flex flex-wrap">{listItems}</ul>
+    <nav className="lg:flex lg:justify-center">
+      <ul className="flex flex-wrap lg:w-2xl">{listItems}</ul>
     </nav>
   );
 }
@@ -38,7 +38,7 @@ function Contact() {
 
 function Account() {
   return (
-    <div className="flex items-center justify-evenly py-4">
+    <div className="flex items-center justify-center gap-x-8 py-4">
       <div>
         <Link
           href={"#"}
@@ -66,7 +66,7 @@ function Account() {
 
 function Sns() {
   return (
-    <div className="flex items-center justify-evenly py-4">
+    <div className="flex items-center justify-center gap-x-8 py-4">
       <div>
         <Link href={"#"} className="block">
           <Image
