@@ -93,7 +93,7 @@ function Sns() {
 
 export default function Footer() {
   return (
-    <footer className="bg03 bg04 relative py-8 md:py-16">
+    <footer className="bg03 bg04 relative flex min-h-screen flex-col justify-center py-8 md:py-16">
       <div className="inner relative z-10">
         <div className="mb-4 text-center text-2xl font-bold">
           <Link href={"/"}>IGNITE MOVEMENT</Link>

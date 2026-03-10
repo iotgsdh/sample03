@@ -47,17 +47,17 @@ body {
 }
 
 .bg01 {
-  @apply before:absolute before:top-0 before:left-0 before:aspect-8/5 before:w-[75%] before:bg-[url(../public/images/bg01.png)] before:bg-cover before:bg-no-repeat;
+  @apply before:absolute before:top-0 before:left-0 before:aspect-8/5 before:w-[60%] before:bg-[url(../public/images/bg01.png)] before:bg-cover before:bg-no-repeat;
 }
 
 .bg02 {
-  @apply after:absolute after:right-0 after:bottom-0 after:aspect-8/5 after:w-[75%] after:bg-[url(../public/images/bg02.png)] after:bg-cover after:bg-no-repeat;
+  @apply after:absolute after:right-0 after:bottom-0 after:aspect-8/5 after:w-[60%] after:bg-[url(../public/images/bg02.png)] after:bg-cover after:bg-no-repeat;
 }
 
 .bg03 {
-  @apply before:absolute before:top-0 before:left-0 before:aspect-8/5 before:w-[75%] before:bg-[url(../public/images/bg03.png)] before:bg-cover before:bg-no-repeat;
+  @apply before:absolute before:top-0 before:left-0 before:aspect-8/5 before:w-[60%] before:bg-[url(../public/images/bg03.png)] before:bg-cover before:bg-no-repeat;
 }
 
 .bg04 {
-  @apply after:absolute after:right-0 after:bottom-0 after:aspect-8/5 after:w-[75%] after:bg-[url(../public/images/bg04.png)] after:bg-cover after:bg-no-repeat;
+  @apply after:absolute after:right-0 after:bottom-0 after:aspect-8/5 after:w-[60%] after:bg-[url(../public/images/bg04.png)] after:bg-cover after:bg-no-repeat;
 }

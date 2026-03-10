@@ -52,7 +52,7 @@ export default async function Home() {
         </section>
 
         {/* events */}
-        <section className="bg03 bg04 bg-foreground relative py-16 md:py-32">
+        <section className="bg03 bg04 bg-foreground relative flex min-h-screen flex-col justify-center py-16 md:py-32">
           <div className="inner relative z-10">
             <h2 className="text-background mb-2 text-4xl font-bold lg:text-6xl">
               EVENTS
@@ -62,7 +62,7 @@ export default async function Home() {
         </section>
 
         {/* about */}
-        <section className="bg03 bg04 relative py-16 md:py-32">
+        <section className="bg03 bg04 relative flex min-h-screen flex-col justify-center py-16 md:py-32">
           <div className="inner relative z-10">
             <div className="gap-x-8 md:flex md:items-center md:justify-between lg:justify-center">
               <p className="mb-4 md:order-2 md:w-[45%]">
@@ -112,7 +112,7 @@ export default async function Home() {
         </section>
 
         {/* list */}
-        <div className="bg03 bg04 relative bg-(--foreground-transparent50) bg-[url(../public/images/samantha-gades-fIHozNWfcvs-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat py-16 bg-blend-overlay md:py-32">
+        <div className="bg03 bg04 relative flex min-h-screen flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/samantha-gades-fIHozNWfcvs-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat py-16 bg-blend-overlay md:py-32">
           <div className="inner relative z-10 lg:mx-auto lg:w-4xl">
             <ul className="w-[80%] md:w-[60%]">
               <li>
@@ -200,7 +200,7 @@ export default async function Home() {
         </div>
 
         {/* partners */}
-        <section className="bg03 bg04 bg-foreground relative py-16 md:py-32">
+        <section className="bg03 bg04 bg-foreground relative flex min-h-screen flex-col justify-center py-16 md:py-32">
           <div className="inner relative z-10 mx-auto lg:w-2xl">
             <div className="mb-8">
               <h2 className="text-background mb-2 text-center text-lg font-bold">
