@@ -1,6 +1,6 @@
 export const items = [
   { en: "NEWS", ja: "ニュース", path: "/pages/news" },
-  { en: "VIDEO", ja: "動画", path: "#" },
+  { en: "VIDEO", ja: "動画", path: "/pages/video" },
   { en: "PROGRAM", ja: "プログラム", path: "#" },
   { en: "EVENTS", ja: "イベント", path: "#" },
   { en: "RANKING", ja: "ランキング", path: "#" },

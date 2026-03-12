@@ -53,7 +53,7 @@ export default async function Home() {
 
         {/* events */}
         <section className="bg03 bg04 bg-foreground relative flex min-h-screen flex-col justify-center py-16 md:py-32">
-          <div className="inner relative z-10">
+          <div className="relative z-10 px-4 lg:mx-auto lg:w-4xl xl:w-6xl">
             <h2 className="text-background mb-2 text-4xl font-bold lg:text-6xl">
               EVENTS
             </h2>
@@ -73,7 +73,7 @@ export default async function Home() {
                 <br />
                 ジャンルや国境を越え、挑戦するすべての人にステージを提供します。
               </p>
-              <div className="mb-4 md:order-1 md:w-[45%] lg:w-[30%]">
+              <div className="mb-4 md:order-1 md:w-[45%] lg:w-[30%] xl:w-[45%]">
                 <Image
                   src={"/images/anna-frizen-QA1ZFTvNnuQ-unsplash.jpg"}
                   width={400}
