@@ -31,7 +31,7 @@ body {
 }
 
 .inner {
-  @apply px-4;
+  @apply px-4 xl:mx-auto xl:w-4xl;
 }
 
 .is-close {

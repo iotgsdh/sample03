@@ -17,7 +17,7 @@ export default async function Home() {
         <div className="bg01 bg02 relative flex h-dvh flex-col justify-center bg-(--foreground-transparent50) bg-[url(../public/images/ilja-tulit-ucAMMD36Si0-unsplash.jpg)] bg-cover bg-position-[67%] bg-no-repeat bg-blend-overlay landscape:h-[150dvh] lg:landscape:h-dvh">
           <div className="relative flex flex-col items-center px-4">
             <p className="text-background text-shadow-foreground flex flex-col gap-y-2 font-bold text-shadow-2xs">
-              <span className="text-6xl md:text-8xl lg:text-9xl">
+              <span className="text-6xl md:text-8xl lg:text-9xl 2xl:text-[160px]">
                 MOVE
                 <br />
                 THE
@@ -201,7 +201,7 @@ export default async function Home() {
 
         {/* partners */}
         <section className="bg03 bg04 bg-foreground relative flex min-h-screen flex-col justify-center py-16 md:py-32">
-          <div className="inner relative z-10 mx-auto lg:w-2xl">
+          <div className="relative z-10 mx-auto px-4 lg:w-2xl">
             <div className="mb-8">
               <h2 className="text-background mb-2 text-center text-lg font-bold">
                 OFFICIAL PARTNERS
