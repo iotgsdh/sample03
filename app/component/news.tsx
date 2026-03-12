@@ -56,7 +56,6 @@ export default function News({ data }: Data) {
               translate: `0 -${index * 100}%`,
               transition: isTransition ? "translate 0.4s ease-in-out" : "none",
             }}
-            className="truncate"
           >
             <Link
               href={`/pages/news/${content.id}`}
@@ -65,9 +64,9 @@ export default function News({ data }: Data) {
               <div className="text-sm">
                 <time dateTime={content.createdAt}>{formattedDate}</time>
               </div>
-              <span className="underline underline-offset-4">
+              <h3 className="truncate underline underline-offset-4">
                 {content.title}
-              </span>
+              </h3>
             </Link>
           </li>
         );
