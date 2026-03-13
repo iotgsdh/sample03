@@ -1,13 +1,14 @@
 import { client } from "@/libs/client";
 import Image from "next/image";
 import Link from "next/link";
+import { log } from "util";
 
 export default async function SinglePage({
   params,
 }: {
-  params: Promise<{ newsId: number; postId: string }>;
+  params: Promise<{ newsId: string; postId: string }>;
 }) {
-  const newsId = (await params).newsId;
+  const newsId = Number((await params).newsId);
   const postId = (await params).postId;
   const data = await client.get({
     endpoint: "news",
@@ -19,6 +20,19 @@ export default async function SinglePage({
   const m = String(date.getMonth() + 1).padStart(2, "0");
   const d = String(date.getDate()).padStart(2, "0");
   const formattedDate = `${y}.${m}.${d}`;
+
+  const allNews = await client.getAllContents({
+    endpoint: "news",
+  });
+  const currentNewsIndex = allNews
+    .map((content: { id: string }) => content.id === postId)
+    .indexOf(true);
+  const prevNewsIndex = currentNewsIndex > 0 ? currentNewsIndex - 1 : null;
+  const nextNewsIndex =
+    currentNewsIndex < allNews.length - 1 ? currentNewsIndex + 1 : null;
+  const prevNewsId =
+    prevNewsIndex || prevNewsIndex === 0 ? allNews[prevNewsIndex].id : null;
+  const nextNewsId = nextNewsIndex ? allNews[nextNewsIndex].id : null;
 
   return (
     <main>
@@ -38,6 +52,28 @@ export default async function SinglePage({
             />
           </div>
           <p className="mb-8 md:mb-16">{data.content}</p>
+          <div className="mb-8 flex justify-center">
+            {prevNewsId && (
+              <div>
+                <Link
+                  href={`/pages/news/${newsId}/${prevNewsId}`}
+                  className="block p-2"
+                >
+                  Prev
+                </Link>
+              </div>
+            )}
+            {nextNewsId && (
+              <div>
+                <Link
+                  href={`/pages/news/${newsId}/${nextNewsId}`}
+                  className="block p-2"
+                >
+                  Next
+                </Link>
+              </div>
+            )}
+          </div>
           <div className="flex justify-center">
             <Link
               href={`/pages/news/${newsId}`}
