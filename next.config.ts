@@ -11,3 +11,5 @@ module.exports = {
     remotePatterns: [new URL("https://images.microcms-assets.io/assets/**")],
   },
 };
+
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
