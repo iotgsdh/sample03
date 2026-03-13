@@ -19,7 +19,7 @@ export const Pagination = ({
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
         <li key={index}>
           {currentPage === number ? (
-            <span className="block p-2">{number}</span>
+            <span className="block p-2 text-gray-400">{number}</span>
           ) : (
             <Link href={`/pages/news/${number}`} className="block p-2">
               {number}
