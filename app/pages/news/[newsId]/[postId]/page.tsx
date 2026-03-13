@@ -57,7 +57,7 @@ export default async function SinglePage({
               <div>
                 <Link
                   href={`/pages/news/${newsId}/${prevNewsId}`}
-                  className="block p-2"
+                  className="block px-4 py-2"
                 >
                   Prev
                 </Link>
@@ -67,7 +67,7 @@ export default async function SinglePage({
               <div>
                 <Link
                   href={`/pages/news/${newsId}/${nextNewsId}`}
-                  className="block p-2"
+                  className="block px-4 py-2"
                 >
                   Next
                 </Link>
