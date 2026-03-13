@@ -58,7 +58,7 @@ export default function News({ data }: Data) {
             }}
           >
             <Link
-              href={`/pages/news/${content.id}`}
+              href={`/pages/news/1/${content.id}`}
               className="md:flex md:items-center md:gap-x-4"
             >
               <div className="text-sm">
