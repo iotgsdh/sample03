@@ -5,12 +5,13 @@ import Link from "next/link";
 export default async function SinglePage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ newsId: number; postId: string }>;
 }) {
-  const id = (await params).id;
+  const newsId = (await params).newsId;
+  const postId = (await params).postId;
   const data = await client.get({
     endpoint: "news",
-    contentId: id,
+    contentId: postId,
   });
 
   const date = new Date(data.createdAt);
@@ -39,7 +40,7 @@ export default async function SinglePage({
           <p className="mb-8 md:mb-16">{data.content}</p>
           <div className="flex justify-center">
             <Link
-              href={"/pages/news"}
+              href={`/pages/news/${newsId}`}
               className="flex items-center text-lg font-bold"
             >
               <div className="size-6">

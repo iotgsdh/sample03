@@ -1,17 +1,26 @@
+import { Pagination } from "@/app/components/pagination";
 import { client } from "@/libs/client";
 import Link from "next/link";
 
-export default async function NewsPage() {
+export default async function NewsPage({
+  params,
+}: {
+  params: Promise<{ newsId: string }>;
+}) {
+  const id = Number((await params).newsId);
+  const limit = 5;
   const data = await client.get({
     endpoint: "news",
+    queries: { offset: (id - 1) * limit, limit: limit },
   });
+  const totalCount = data.totalCount;
 
   return (
     <main>
       <section className="bg03 bg04 relative flex min-h-screen items-center justify-center py-16 lg:py-(--headerHeight)">
         <div className="inner relative z-10">
           <h1 className="mb-4 text-2xl font-bold">NEWS</h1>
-          <div>
+          <div className="mb-8">
             {data.contents.map(
               (
                 content: { createdAt: string; id: string; title: string },
@@ -26,7 +35,7 @@ export default async function NewsPage() {
                 return (
                   <article key={i}>
                     <Link
-                      href={`/pages/news/${content.id}`}
+                      href={`/pages/news/${id}/${content.id}`}
                       className="block border-be py-4"
                     >
                       <div className="text-sm">
@@ -41,6 +50,7 @@ export default async function NewsPage() {
               },
             )}
           </div>
+          <Pagination totalCount={totalCount} limit={limit} currentPage={id} />
         </div>
       </section>
     </main>

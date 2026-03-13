@@ -1,5 +1,4 @@
 import { client } from "@/libs/client";
-import { ReactNode } from "react";
 import parse from "html-react-parser";
 
 export default async function VideoPage() {

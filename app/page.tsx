@@ -1,7 +1,7 @@
 import { client } from "@/libs/client";
 import Link from "next/link";
-import News from "./component/news";
-import Events from "./component/events";
+import News from "./components/news";
+import Events from "./components/events";
 import Image from "next/image";
 
 export default async function Home() {
